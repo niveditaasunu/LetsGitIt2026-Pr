@@ -3,6 +3,8 @@
   "bio": "Open Source Community",
   "review": "Let's Git It!",
   "socialLink": "https://github.com/fossmec",
-  "image": "../../assets/participants/fossmec.svg",
-  "color": "#ff69b4"
+  "image": "fossmec.svg",
+  "color": "#ff69b4",
+  "insta": "fossmec"
 }
+

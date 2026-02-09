@@ -6,13 +6,13 @@
    ============================================ */
 
 @theme {
-  --font-syne: 'Syne', sans-serif;
-  --font-clash: 'Clash Display', sans-serif;
-  --font-space: 'Space Grotesk', sans-serif;
-  --font-archivo: 'Archivo Black', sans-serif;
-  --font-mono: 'Space Mono', monospace;
-  --font-bebas: 'Bebas Neue', sans-serif;
-  
+  --font-syne: "Syne", sans-serif;
+  --font-clash: "Clash Display", sans-serif;
+  --font-space: "Space Grotesk", sans-serif;
+  --font-archivo: "Archivo Black", sans-serif;
+  --font-mono: "Space Mono", monospace;
+  --font-bebas: "Bebas Neue", sans-serif;
+
   /* Marquee animations */
   --animate-marquee: marquee 20s linear infinite;
   --animate-marquee-reverse: marquee-reverse 20s linear infinite;
@@ -24,14 +24,27 @@
    ============================================ */
 
 :root {
-  /* Raw Colors */
+  /* ============================================
+     🎨 BOLD EXPRESSIVE NEOBRUTALISM COLORS
+     High-energy primaries that POP!
+     ============================================ */
+
+  /* Core Primaries - MAXIMUM IMPACT */
+  --color-electric-blue: #0066ff;
+  --color-hot-coral: #ff4757;
+  --color-golden: #ffd700;
+  --color-neon-green: #00ff88;
+  --color-vivid-purple: #9b59b6;
+  --color-screaming-pink: #ff1493;
+
+  /* Classic Neobrutalist Palette */
   --color-lime: #a3e635;
   --color-hotpink: #ff69b4;
   --color-purple: #8b5cf6;
   --color-blue: #3b82f6;
   --color-yellow: #facc15;
   --color-red: #ef4444;
-  --color-black: #000000;
+  --color-black: #0a0a0a;
   --color-white: #ffffff;
   --color-cream: #fef9c3;
   --color-orange: #f97316;
@@ -41,15 +54,23 @@
   --color-magenta: #e879f9;
   --color-neon: #39ff14;
   --color-indigo: #6366f1;
-  
+
+  /* Expressive Accent Colors for UI Elements */
+  --color-punch-red: #ff3d3d;
+  --color-electric-yellow: #ffee00;
+  --color-acid-green: #b8ff00;
+  --color-royal-blue: #4169e1;
+  --color-sunset-orange: #ff6b35;
+
   /* Default (Lime) */
   --bg-main: var(--color-lime);
   --bg-secondary: var(--color-white);
   --text-main: var(--color-black);
   --accent: var(--color-hotpink);
   --secondary: var(--color-purple);
+  --tertiary: var(--color-electric-blue);
   --border-color: var(--color-black);
-  
+
   /* Neobrutalism Design Tokens */
   --border-width: 3px;
   --border-width-thick: 4px;
@@ -58,18 +79,26 @@
   --radius-sm: 5px;
   --radius-md: 10px;
   --radius-lg: 15px;
-  
-  /* Hard Shadows - The Brutalist Signature */
-  --shadow-brutal: 4px 4px 0px 0px var(--color-black);
-  --shadow-brutal-md: 6px 6px 0px 0px var(--color-black);
-  --shadow-brutal-lg: 8px 8px 0px 0px var(--color-black);
-  --shadow-brutal-xl: 12px 12px 0px 0px var(--color-black);
-  --shadow-brutal-accent: 6px 6px 0px 0px var(--accent);
-  --shadow-brutal-secondary: 6px 6px 0px 0px var(--secondary);
-  
-  /* Transitions */
-  --transition-brutal: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Hard Shadows - The Brutalist Signature - MORE DRAMATIC */
+  --shadow-brutal: 5px 5px 0px 0px var(--color-black);
+  --shadow-brutal-md: 8px 8px 0px 0px var(--color-black);
+  --shadow-brutal-lg: 12px 12px 0px 0px var(--color-black);
+  --shadow-brutal-xl: 16px 16px 0px 0px var(--color-black);
+  --shadow-brutal-accent: 8px 8px 0px 0px var(--accent);
+  --shadow-brutal-secondary: 8px 8px 0px 0px var(--secondary);
+  --shadow-brutal-tertiary: 8px 8px 0px 0px var(--tertiary);
+
+  /* Hover State Shadows - Even BOLDER */
+  --shadow-brutal-hover: 10px 10px 0px 0px var(--color-black);
+  --shadow-brutal-hover-lg: 16px 16px 0px 0px var(--color-black);
+  --shadow-brutal-hover-xl: 20px 20px 0px 0px var(--color-black);
+
+  /* Transitions - Snappy & Playful */
+  --transition-brutal: all 0.12s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --transition-snap: all 0.08s ease-out;
+  --transition-elastic: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 /* ============================================
@@ -142,32 +171,72 @@
    🌈 THEME 7: CYBER NOIR
    ============================================ */
 .theme-cyber {
-  --bg-main: var(--color-black);
-  --bg-secondary: #1a1a1a;
-  --text-main: var(--color-neon);
-  --accent: var(--color-neon);
-  --secondary: var(--color-cyan);
-  --border-color: var(--color-neon);
+  --bg-main: #00d4ff;
+  --bg-secondary: #0099cc;
+  --text-main: var(--color-black);
+  --accent: #ff3366;
+  --secondary: #ffcc00;
+  --border-color: var(--color-black);
 }
 
 .theme-cyber .brutal-border {
-  border-color: var(--color-neon) !important;
+  border-color: var(--color-black) !important;
 }
 
 /* ============================================
-   🎭 BASE STYLES
+   🎭 BASE STYLES - NEOBRUTALIST FOUNDATION
    ============================================ */
 
 body {
   background-color: var(--bg-main);
   color: var(--text-main);
-  font-family: 'Space Grotesk', sans-serif;
-  transition: background-color 0.5s ease, color 0.3s ease;
+  font-family: "Space Grotesk", sans-serif;
+  transition:
+    background-color 0.5s ease,
+    color 0.3s ease;
   overflow-x: hidden;
+  position: relative;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Archivo Black', sans-serif;
+/* Neobrutalist Grid Pattern Background */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.03) 2px, transparent 2px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.03) 2px, transparent 2px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Optional: Add scattered dots pattern overlay */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(circle,
+      rgba(0, 0, 0, 0.04) 1px,
+      transparent 1px);
+  background-size: 20px 20px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Ensure content stays above pattern */
+body>* {
+  position: relative;
+  z-index: 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Archivo Black", sans-serif;
   text-transform: uppercase;
   letter-spacing: -0.02em;
 }
@@ -178,105 +247,218 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Marquee Animations */
 @keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 @keyframes marquee-reverse {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(0); }
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }
 
 @keyframes marquee-vertical {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-100%); }
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
 }
 
 /* Wobble Animation - Continuous subtle rotation */
 @keyframes wobble {
-  0%, 100% { transform: rotate(-2deg); }
-  50% { transform: rotate(2deg); }
+
+  0%,
+  100% {
+    transform: rotate(-2deg);
+  }
+
+  50% {
+    transform: rotate(2deg);
+  }
 }
 
 /* Float Animation - Upward bobbing */
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
 }
 
 /* Shake Animation - Quick shake */
 @keyframes shake {
-  0%, 100% { transform: translateX(0); }
-  10%, 30%, 50%, 70%, 90% { transform: translateX(-4px); }
-  20%, 40%, 60%, 80% { transform: translateX(4px); }
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-4px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(4px);
+  }
 }
 
 /* Pop Animation - Button press effect */
 @keyframes pop {
-  0% { transform: scale(1); }
-  50% { transform: scale(0.95); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.95);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 /* Bounce In Animation */
 @keyframes bounce-in {
-  0% { transform: scale(0); opacity: 0; }
-  50% { transform: scale(1.1); }
-  100% { transform: scale(1); opacity: 1; }
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 /* Slide Up Animation */
 @keyframes slide-up {
-  0% { transform: translateY(40px); opacity: 0; }
-  100% { transform: translateY(0); opacity: 1; }
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /* Glitch Animation - RGB split effect */
 @keyframes glitch {
   0% {
-    text-shadow: 2px 2px var(--accent), -2px -2px var(--secondary);
+    text-shadow:
+      2px 2px var(--accent),
+      -2px -2px var(--secondary);
     transform: translate(0);
   }
+
   20% {
-    text-shadow: -2px 2px var(--accent), 2px -2px var(--secondary);
+    text-shadow:
+      -2px 2px var(--accent),
+      2px -2px var(--secondary);
     transform: translate(-2px, 2px);
   }
+
   40% {
-    text-shadow: 2px -2px var(--accent), -2px 2px var(--secondary);
+    text-shadow:
+      2px -2px var(--accent),
+      -2px 2px var(--secondary);
     transform: translate(2px, -2px);
   }
+
   60% {
-    text-shadow: -2px -2px var(--accent), 2px 2px var(--secondary);
+    text-shadow:
+      -2px -2px var(--accent),
+      2px 2px var(--secondary);
     transform: translate(-2px, -2px);
   }
+
   80% {
-    text-shadow: 2px 2px var(--accent), -2px -2px var(--secondary);
+    text-shadow:
+      2px 2px var(--accent),
+      -2px -2px var(--secondary);
     transform: translate(2px, 2px);
   }
+
   100% {
-    text-shadow: 2px 2px var(--accent), -2px -2px var(--secondary);
+    text-shadow:
+      2px 2px var(--accent),
+      -2px -2px var(--secondary);
     transform: translate(0);
   }
 }
 
 /* Spin Slow Animation */
 @keyframes spin-slow {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* Pulse Scale Animation */
 @keyframes pulse-scale {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); }
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
 }
 
 /* Wiggle Animation */
 @keyframes wiggle {
-  0%, 100% { transform: rotate(-3deg) scale(1); }
-  25% { transform: rotate(3deg) scale(1.02); }
-  50% { transform: rotate(-3deg) scale(1); }
-  75% { transform: rotate(3deg) scale(0.98); }
+
+  0%,
+  100% {
+    transform: rotate(-3deg) scale(1);
+  }
+
+  25% {
+    transform: rotate(3deg) scale(1.02);
+  }
+
+  50% {
+    transform: rotate(-3deg) scale(1);
+  }
+
+  75% {
+    transform: rotate(3deg) scale(0.98);
+  }
 }
 
 /* ============================================
@@ -362,44 +544,89 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: none;
 }
 
-/* Neobrutalist Button Base */
+/* Neobrutalist Button Base - MAXIMUM IMPACT */
 .neo-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 0.75rem 1.5rem;
-  font-weight: 700;
+  font-weight: 800;
   font-size: 1rem;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
   border: var(--border-width-thick) solid var(--color-black);
   background-color: var(--accent);
   color: var(--color-black);
-  box-shadow: var(--shadow-brutal);
-  transition: var(--transition-brutal);
+  box-shadow: var(--shadow-brutal-md);
+  transition: var(--transition-bounce);
   cursor: pointer;
   text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Shine effect on hover */
+.neo-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.3),
+      transparent);
+  transition: left 0.5s ease;
+}
+
+.neo-button:hover::before {
+  left: 100%;
 }
 
 .neo-button:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: var(--shadow-brutal-md);
+  transform: translate(-4px, -4px) rotate(-1deg);
+  box-shadow: var(--shadow-brutal-hover-lg);
 }
 
 .neo-button:active {
-  transform: translate(4px, 4px);
-  box-shadow: none;
+  transform: translate(6px, 6px) scale(0.98);
+  box-shadow: 2px 2px 0px 0px var(--color-black);
+  transition: var(--transition-snap);
 }
 
 /* Stagger Animation Delays */
-.stagger-1 { animation-delay: 0.1s; }
-.stagger-2 { animation-delay: 0.2s; }
-.stagger-3 { animation-delay: 0.3s; }
-.stagger-4 { animation-delay: 0.4s; }
-.stagger-5 { animation-delay: 0.5s; }
-.stagger-6 { animation-delay: 0.6s; }
-.stagger-7 { animation-delay: 0.7s; }
-.stagger-8 { animation-delay: 0.8s; }
+.stagger-1 {
+  animation-delay: 0.1s;
+}
+
+.stagger-2 {
+  animation-delay: 0.2s;
+}
+
+.stagger-3 {
+  animation-delay: 0.3s;
+}
+
+.stagger-4 {
+  animation-delay: 0.4s;
+}
+
+.stagger-5 {
+  animation-delay: 0.5s;
+}
+
+.stagger-6 {
+  animation-delay: 0.6s;
+}
+
+.stagger-7 {
+  animation-delay: 0.7s;
+}
+
+.stagger-8 {
+  animation-delay: 0.8s;
+}
 
 /* Text Shadow Utilities */
 .text-shadow-brutal {
@@ -448,7 +675,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0.5rem 1rem;
     font-size: 0.875rem;
   }
-  
+
   .mobile-title-hero {
     font-size: clamp(3rem, 15vw, 6rem) !important;
   }

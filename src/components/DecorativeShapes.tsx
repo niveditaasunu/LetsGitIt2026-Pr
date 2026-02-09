@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
 // Shape Types
-type ShapeType = 'star' | 'circle' | 'square' | 'triangle' | 'cross' | 'polygon' | 'zigzag' | 'diamond' | 'heart' | 'lightning';
+type ShapeType = 'star' | 'circle' | 'square' | 'triangle' | 'cross' | 'polygon' | 'zigzag' | 'diamond' | 'heart' | 'lightning' | 'fossmec';
 
 interface Shape {
   id: number;
@@ -33,7 +33,8 @@ const generateShapes = (count: number): Shape[] => {
 
   const types: ShapeType[] = [
     'star', 'circle', 'square', 'triangle', 'cross',
-    'polygon', 'zigzag', 'diamond', 'heart', 'lightning'
+    'polygon', 'zigzag', 'diamond', 'heart', 'lightning',
+    'fossmec', 'fossmec', 'fossmec', 'fossmec' // More FOSSMEC logos!
   ];
 
   return Array.from({ length: count }).map((_, i) => ({
@@ -116,6 +117,23 @@ const ShapeSVG = ({ type, color }: { type: ShapeType; color: string }) => {
         <svg viewBox="0 0 24 24" fill={color} className="w-full h-full" style={shadowStyle}>
           <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="black" strokeWidth="1.5" />
         </svg>
+      );
+    case 'fossmec':
+      return (
+        <div
+          className="w-full h-full rounded-lg border-3 border-black flex items-center justify-center p-2"
+          style={{
+            backgroundColor: color,
+            boxShadow: '4px 4px 0px 0px black'
+          }}
+        >
+          <img
+            src="/fossmec.svg"
+            alt="FOSSMEC"
+            className="w-full h-full object-contain"
+            style={{ filter: 'drop-shadow(2px 2px 0px rgba(0,0,0,0.5))' }}
+          />
+        </div>
       );
     default:
       return null;

@@ -1,43 +1,65 @@
-# Astro Starter Kit: Minimal
+# Let's Git It
 
-```sh
-npm create astro@latest -- --template minimal
+A Git and GitHub workshop by FOSS MEC. Add your review card by submitting a PR.
+
+## How to Participate
+
+### 1. Fork the Repository
+
+Click the **Fork** button on [github.com/fossmec/lets-git-it](https://github.com/fossmec/lets-git-it)
+
+### 2. Clone Your Fork
+
+```bash
+git clone https://github.com/YOUR-USERNAME/lets-git-it.git
+cd lets-git-it
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+### 3. Create Your Review File
 
-## 🚀 Project Structure
+Create a new file at `src/content/reviews/your-name.json`:
 
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+```json
+{
+  "name": "Your Name",
+  "bio": "Your tagline",
+  "review": "Your message here",
+  "socialLink": "https://github.com/yourusername",
+  "image": "your-name.png",
+  "color": "#your-lucky-color",
+  "insta": "your_instagram"
+}
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+**Fields:**
+- `name` - Your display name (required)
+- `bio` - Short tagline (optional)
+- `review` - Your message (required)
+- `socialLink` - Link to your profile (optional)
+- `image` - Your image filename (optional)
+- `color` - Pick your lucky color in hex format like `#ff69b4` (optional)
+- `insta` - Instagram username without @ (optional)
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+### 4. Add Your Image (Optional)
 
-Any static assets, like images, can be placed in the `public/` directory.
+Put your image in `src/assets/participants/your-name.png`
 
-## 🧞 Commands
+### 5. Commit Your Changes
 
-All commands are run from the root of the project, from a terminal:
+```bash
+git add .
+git commit -m "Add review: Your Name"
+git push origin main
+```
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+### 6. Open a Pull Request
 
-## 👀 Want to learn more?
+Go to your fork on GitHub and click **New Pull Request**
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+### 7. Wait for Approval
+
+We will review and merge your PR
+
+### 8. See Your Card
+
+Visit the website to see your review card live
